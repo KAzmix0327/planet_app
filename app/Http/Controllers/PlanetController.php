@@ -49,14 +49,14 @@ class PlanetController extends Controller
     }
 
     // editページへ移動
-    public function edit($id) 
+    public function edit($id)
     {
         $planet = Planet::find($id);
         return view('planets.edit', ['planet' => $planet]);
     }
 
     // updateページへ移動
-    public function update(planetRequest $request, $id) 
+    public function update(planetRequest $request, $id)
     {
         // ここはidで探して持ってくる以外はstoreと同じ
         $planet = Planet::find($id);
@@ -73,13 +73,12 @@ class PlanetController extends Controller
         // 登録したらindexに戻る
         return redirect('/planets');
     }
-    
+
     // destroyページへ移動
-        public function destroy($id)
+    public function destroy($id)
     {
         $planet = Planet::find($id);
         $planet->delete();
         return redirect('/planets');
     }
 }
-

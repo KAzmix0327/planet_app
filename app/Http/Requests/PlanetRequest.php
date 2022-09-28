@@ -24,8 +24,8 @@ class PlanetRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|string|max:50',
-            'en_name' => 'required|string|max:2000',
+            'name' => 'required|string|max:20',
+            'en_name' => 'required|string|max:30',
             'radius' => 'required|integer|min:0',
             'weight' => 'required|integer|min:0',
 
