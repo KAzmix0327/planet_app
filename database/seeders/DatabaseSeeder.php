@@ -14,5 +14,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
+        // Seeder（シーダークラス）の呼び出し
+        $this->call(PlanetSeeder::class);
     }
 }
